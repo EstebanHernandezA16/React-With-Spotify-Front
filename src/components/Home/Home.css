@@ -1,0 +1,39 @@
+
+
+.home-container{
+    background-color: black;
+    height: 90vh;
+    width: 80vw;
+    margin-top: 5vh;
+    background-size: cover; 
+   
+}
+
+.neon{
+    animation: color-transition 7s ease-in-out infinite;
+}
+
+#home-container--banner{
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+@keyframes color-transition {
+    0%{
+        box-shadow: 0 0 7vh #00ebef;
+    }
+    25%{
+        box-shadow: 0 0 7vh #9400d3;
+    }
+    50%{
+        box-shadow: 0 0 7vh #e22b5c;
+    }    
+    75%{
+        box-shadow: 0 0 7vh #0067dc;
+    }
+    100%{
+        box-shadow: 0 0 7vh #00ebef;
+    }
+}

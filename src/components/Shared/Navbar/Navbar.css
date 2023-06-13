@@ -1,0 +1,36 @@
+.menu{
+    background-color: #090D0E;
+    width: auto;
+    background: url('https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/Ecualizador.gif?alt=media&token=29d402aa-7fcc-40c0-b3a8-f5fba38688a1') no-repeat bottom center;
+    background-size: 100%;
+}
+
+.icon{
+    width: 3.5vw;
+    height: 5vh;
+    margin-left: 0vh;
+}
+.spoti-Icon{
+    width: 2vw;
+    height: 4vh;
+}
+.boxIcon{
+    margin-left: 0%;
+}
+.navbar-container{
+    margin-left: 0%;
+}
+
+.nav-link-item{
+        background-color: rgb(29, 3, 54);
+        margin-left: 1vw;
+        border-radius: 1.5vh;
+        /* text-shadow: 0px 0px 10px #a500dc, 0px 0px 20px #a500dc, 0px 0px 30px #a500dc, 0px 0px 40px #a500dc, 0px 0px 40px #a500dc, 0px 0px 80px #a500dc, 0px 0px 80px #a500dc, 0px 0px 100px #a500dc; */
+        box-shadow: 0px 0px 3vh #0067dc,0px 0px 3vh #0067dc,0px 0px 3vh #0067dc;
+        opacity: 0.5;
+        
+}
+
+.nav-link--color{
+    color: whitesmoke;
+}
