@@ -1,0 +1,19 @@
+
+
+
+.login-text{
+    color: whitesmoke;
+}
+
+.login__button{
+    margin-top: 5vh;
+    background-color: black;
+    border-color: #FF1493;
+    box-shadow: 0.2vw 0.3vh 3vh#FF1493;
+    
+    
+}
+.login__button:hover{
+    background-color: #FF1493;
+    border-color: #FF1493;
+}

@@ -5,8 +5,14 @@ import {NotFound} from "../NotFound/NotFound";
 import {Login} from "../session/Login/login";
 import {SignIn} from "../session/SignIn/SignIn";
 import {Shop} from "../Shop/Shop";
+import { cerrar } from "../../Api/cerrar";
 
 export const ClientRoutes = () => {
+
+
+window.addEventListener("beforeunload", cerrar)
+
+
     return(
         <>
             <Routes>
