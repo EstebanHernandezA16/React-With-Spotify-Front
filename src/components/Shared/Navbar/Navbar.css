@@ -34,3 +34,16 @@
 .nav-link--color{
     color: whitesmoke;
 }
+
+.end-nav{
+    display: flex;
+    justify-content: flex-end;
+   
+   margin-left: 81vw;
+    position: absolute;
+    
+}
+
+.nav-username{
+margin-right: 2vw;
+}

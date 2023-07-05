@@ -6,6 +6,7 @@ import {Login} from "../session/Login/login";
 import {SignIn} from "../session/SignIn/SignIn";
 import {Shop} from "../Shop/Shop";
 import { cerrar } from "../../Api/cerrar";
+import { Socket } from "../Socket/Socket";
 
 export const ClientRoutes = () => {
 
@@ -19,7 +20,9 @@ window.addEventListener("beforeunload", cerrar)
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />}/>
                 <Route path="/signin" element={<SignIn />}/>
-                <Route  path="/shop" element={<Shop />}/>
+                <Route path="/shop" element={<Shop />}/>
+                <Route path="/socket" element={<Socket />}/>
+                
                 <Route path="*" element={<NotFound />}/>
             </Routes>
         </>
@@ -31,18 +34,6 @@ window.addEventListener("beforeunload", cerrar)
 
 
 
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/login" element={<Login />} />
-//         <Route path="/sign" element={<SignIn />} />
-//         <Route path="/shop" element={<Shop />} />
-//         <Route path="/page-not-found" element={<NotFound />} />
-//         <Route path="*" element={<Navigate to="/page-not-found" />} />
-//       </Routes>
-//     </Router>
-//   );
 };
 
 

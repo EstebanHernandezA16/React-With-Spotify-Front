@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -8,8 +8,12 @@ import { NavbarIcon } from '../../../Utils/Utils';
 import { SpotIcon } from '../../../Utils/Utils';
 import { Person } from 'react-bootstrap-icons';
 import './Navbar.css'
+import { AppContext } from '../../../hooks/useContext';
 
 export const MyNavbar = () =>{
+
+  const {auth}= useContext(AppContext)
+
 
    
     return(
@@ -32,12 +36,14 @@ export const MyNavbar = () =>{
               <Nav.Link as={Link} to="/signin" className='nav-link--color'>In molecular building 🦠</Nav.Link>
               </Nav.Item>
             </Nav>
-            <Nav >
-              {/* <Nav.Item>
-                <Nav.Link as={Link}><Image src={SpotIcon} className='spoti-Icon' style={{marginLeft: '600%'}}/> </Nav.Link>
-              </Nav.Item> */}
+            <Nav className='end-nav' >
+              {auth?
+              (<Nav.Item className='nav-link-item nav-username'>
+              <Nav.Link as={Link} to="/signin" className='nav-link--color'>Welcome {auth.username}</Nav.Link>
+              </Nav.Item>): null}
               <Nav.Item >
-                <Nav.Link as={Link} to="/login" ><Person color='whitesmoke' style={{marginLeft: '600%'}}  size={32}/></Nav.Link>
+              {/* style={{marginLeft: '600%'}} */}
+                <Nav.Link as={Link} to="/login" ><Person color='whitesmoke'   size={32}/></Nav.Link>
               </Nav.Item>
             </Nav>
           </Container>

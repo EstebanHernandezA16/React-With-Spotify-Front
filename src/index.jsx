@@ -5,11 +5,14 @@ import { ClientRoutes } from './components/Routes/Routes'
 import { MyNavbar } from './components/Shared/Navbar/Navbar'
 import { Footer } from './components/Shared/Footer/Footer'
 import { BrowserRouter } from 'react-router-dom';
+import { AppProvider } from './hooks/useContext';
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    
     <BrowserRouter>
+    <AppProvider>
     <style>
       {`
         body {
@@ -21,10 +24,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       `}
     </style>
     <div style={{ width: "100vw", height: "100vh"}}>
+      
       <MyNavbar />
       <ClientRoutes />
       <Footer />
+     
     </div>
+    </AppProvider>
     </BrowserRouter>
+   
   </React.StrictMode>
 );
