@@ -11,11 +11,12 @@ import { Socket } from "../Socket/Socket";
 export const ClientRoutes = () => {
 
 
-window.addEventListener("beforeunload", cerrar)
+// window.addEventListener("beforeunload", cerrar)
 
 
     return(
         <>
+        
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />}/>
@@ -25,6 +26,7 @@ window.addEventListener("beforeunload", cerrar)
                 
                 <Route path="*" element={<NotFound />}/>
             </Routes>
+           
         </>
     );
 

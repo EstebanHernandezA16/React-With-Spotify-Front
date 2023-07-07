@@ -39,7 +39,7 @@ export const MyNavbar = () =>{
             <Nav className='end-nav' >
               {auth?
               (<Nav.Item className='nav-link-item nav-username'>
-              <Nav.Link as={Link} to="/signin" className='nav-link--color'>Welcome {auth.username}</Nav.Link>
+              <Nav.Link as={Link} to="/signin" className='nav-link--color'>Loged as : {auth.username}</Nav.Link>
               </Nav.Item>): null}
               <Nav.Item >
               {/* style={{marginLeft: '600%'}} */}

@@ -17,7 +17,10 @@ export const Login = () =>{
 
   const {auth, setAuth}= useContext(AppContext)
   useEffect(()=>{
-    updateAuth()
+    if(auth){
+      updateAuth()
+    }
+
   },[])
   
   useEffect(()=>{
@@ -25,11 +28,13 @@ export const Login = () =>{
   },[auth!=null])
 
 
-  const updateAuth = () =>{
+  const updateAuth = async() =>{
     setAuth({
       token: getTokenCookie(),
       username: jwtDecode(getTokenCookie()).username
     })
+
+    setTokenCookie(auth.token)
 
   }
 
@@ -72,7 +77,7 @@ const formik = useFormik({
 
           formik.resetForm();
           //navigate
-          navigate('/')
+          navigate('/shop')
 
         }else if(response.result?.error.includes('Username doesnt exists')){
           alertHelper('Error',3,'orange','That username isnt is registered', 5000)

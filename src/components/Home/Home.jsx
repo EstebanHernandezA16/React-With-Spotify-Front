@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Container } from 'react-bootstrap'
 import {Image} from 'react-bootstrap'
 import './Home.css'
 import { banner } from '../../Utils/Utils'
 import { History } from '../History/History'
+import { AppProvider } from '../../hooks/useContext'
+
 
 export const Home = () => {
+const {auth} = useContext(AppProvider)
 
+useEffect(()=>{
+  console.log(JSON.stringify(auth, null, 2));
+},[])
     
   return (
     <>
